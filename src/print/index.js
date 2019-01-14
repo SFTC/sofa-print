@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import '../style.css';
+import '../style.less';
 
 const PrintWrapper = styled.div`
   margin-top: 20px;

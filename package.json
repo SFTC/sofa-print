@@ -15,7 +15,11 @@
     "type": "git",
     "url": "git+https://github.com/SFTC/sofa-print.git"
   },
-  "keywords": ["react", "component", "print"],
+  "keywords": [
+    "react",
+    "component",
+    "print"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
@@ -23,6 +27,8 @@
   },
   "homepage": "https://github.com/SFTC/sofa-print#readme",
   "dependencies": {
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.2.0",
     "react-proptypes": "^1.0.0",
