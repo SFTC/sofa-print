@@ -20,5 +20,25 @@
   "bugs": {
     "url": "https://github.com/SFTC/sofa-print/issues"
   },
-  "homepage": "https://github.com/SFTC/sofa-print#readme"
+  "homepage": "https://github.com/SFTC/sofa-print#readme",
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-proptypes": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  }
 }
