@@ -1,0 +1,78 @@
+///////////////////////// Print /////////////////////////
+.break-page {
+  height: 20px;
+  background: #eee;
+  margin-top: 30px;
+  margin-left: -100px;
+  margin-right: -100px;
+  box-shadow: 0 -1px 1px 1px #ddd;
+}
+
+@media print {
+	body * {
+		visibility: hidden;
+	}
+
+	@page {
+    margin: 0px 0px;
+  }
+
+  .waybill-print {
+    min-height: 1100px;
+  }
+
+  .main-content {
+    margin-top: 0 !important;
+  }
+
+  .show-menu {
+    width: calc(100%);
+    margin-left: 0;
+  }
+
+	#section-to-print, #section-to-print * {
+		visibility: visible;
+  }
+
+  .print-bar, .sidebar, .show-menu-headerbar, .hide-menu-headerbar {
+    display: none;
+  }
+
+  .print-wrapper {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
+	#section-to-print {
+    // 打印区域样式
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .print-info {
+    display: block;
+  }
+
+  #section-to-print .no-print, #section-to-print .no-print * {
+    visibility: hidden;
+  }
+
+  #section-to-print .no-print-position {
+    display: none;
+  }
+
+  #section-to-print .no-print-bordered-table td {
+    border: 0px solid #fff;
+  }
+
+  #section-to-print .no-print-border {
+    border: 0px solid #fff;
+  }
+
+  #section-to-print .break-page {
+    page-break-after: always;
+    height: 0px;
+    box-shadow: none;
+    margin-top: 0;
+  }
+}
