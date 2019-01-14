@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import './style.css';
 
-class Header extends Component {
+function handlePrint() {
+  window.print();
+}
+class Print extends Component {
   constructor(props) {
     super(props);
     this.state = {
     };
   }
-
   render() {
     return (
-      <div className="laba-header">
-        <h1>hello world</h1>
+      <div>
+        <button onClick={handlePrint}>打印</button>
       </div>
     );
   }
 }
 
-Header.propTypes = {
+Print.propTypes = {
 }
 
-export default Header;
+export default Print;

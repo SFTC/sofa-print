@@ -112,39 +112,43 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import PropTypes from 'prop-types';
 
 
-var Header = function (_Component) {
-  _inherits(Header, _Component);
+function handlePrint() {
+  window.print();
+}
 
-  function Header(props) {
-    _classCallCheck(this, Header);
+var Print = function (_Component) {
+  _inherits(Print, _Component);
 
-    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+  function Print(props) {
+    _classCallCheck(this, Print);
+
+    var _this = _possibleConstructorReturn(this, (Print.__proto__ || Object.getPrototypeOf(Print)).call(this, props));
 
     _this.state = {};
     return _this;
   }
 
-  _createClass(Header, [{
+  _createClass(Print, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'laba-header' },
+        null,
         _react2.default.createElement(
-          'h1',
-          null,
-          'hello world'
+          'button',
+          { onClick: handlePrint },
+          '\u6253\u5370'
         )
       );
     }
   }]);
 
-  return Header;
+  return Print;
 }(_react.Component);
 
-Header.propTypes = {};
+Print.propTypes = {};
 
-exports.default = Header;
+exports.default = Print;
 
 /***/ }),
 /* 2 */
