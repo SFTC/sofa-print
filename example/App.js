@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
+import './app.css';
 
 import Print from '../src/index';
 
@@ -11,7 +12,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="app-box">
         <h1>打印示例页面</h1>
         <Print />
       </div>
