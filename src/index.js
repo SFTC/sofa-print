@@ -1,3 +1,4 @@
-import Header from './print/index';
+import Print from './print/index';
+import Break from './break/index';
 
-export default Header;
+export default Print;

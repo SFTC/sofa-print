@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import '../style.less';
 
 const PrintWrapper = styled.div`
-  margin-top: 20px;
   background: #fff;
   font-size: 14px;
   overflow-y: scroll;
@@ -15,10 +14,15 @@ const PrintWrapper = styled.div`
   ${(props) => props.height && css`
     height: ${props.height}px;
   `}
+  @media print {
+    .page-container {
+      padding: 0 !important;
+    }
+  }
 `;
 
 const PrintArea = styled.div`
-  margin: 0 auto;
+  margin: 0;
 `;
 
 class Print extends Component {
@@ -27,6 +31,22 @@ class Print extends Component {
     this.state = {
       height: 300,
     };
+    this.resetHeight = this.resetHeight.bind(this);
+  }
+  componentDidMount() {
+    this.resetHeight();
+    window.addEventListener('resize', this.resetHeight);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resetHeight);
+  }
+
+  resetHeight() {
+    const innerHeight = document.body.offsetHeight;
+    this.setState({
+      height: innerHeight - 200,
+    });
   }
   render() {
     const { direction } = this.props;
@@ -44,8 +64,12 @@ class Print extends Component {
 }
 
 Print.propTypes = {
-  direction: PropTypes.string.isRequired,
   children: PropTypes.any,
+  direction: PropTypes.string.isRequired,
+  wrapperHeight: PropTypes.number.isRequired,
+  paddingZeroClassName: PropTypes.string,
+  marginZeroClassName: PropTypes.string,
+  displayNoneClassName: PropTypes.string,
 }
 
 export default Print;

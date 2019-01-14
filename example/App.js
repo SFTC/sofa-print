@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Print from '../src/index';
+import Break from '../src/break/index';
 
 const Button = styled.button`
   line-height: 1.2;
@@ -49,7 +50,7 @@ class App extends Component {
   }
   render() {
     return (
-      <PageContainer>
+      <PageContainer id="page-container">
         <ActionBar className="action-bar">
           <Button onClick={handlePrint} style={{ marginRight: 10 }}>
             打印
@@ -58,7 +59,11 @@ class App extends Component {
             返回
           </Button>
         </ActionBar>
-        <Print direction="vertical">
+        <Print direction="vertical" wrapperHeight={200}>
+          <p>first</p>
+          <p>second</p>
+          <p>third</p>
+          <Break />
           <p>first</p>
           <p>second</p>
           <p>third</p>
