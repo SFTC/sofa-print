@@ -18,20 +18,25 @@ const Button = styled.button`
   height: 28px;
   user-select: none;
   transition: all .3s cubic-bezier(.645,.045,.355,1);
-  position: relative;
   color: rgba(0,0,0,.65);
   background-color: #fff;
   border-color: #d9d9d9;
+  outline: none;
 `;
 
 const ActionBar = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background: #f4f4f4;
+  box-shadow: 0 3px 5px #ccc;
 `;
 const PageContainer = styled.div`
-  width: 750px;
-  height: 1000px;
+  width: 950px;
+  height: 800px;
 
   ${(props) => props.debugStyle && css`
     body * {
@@ -113,28 +118,10 @@ class Print extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      height: 300,
     };
-    this.resetHeight = this.resetHeight.bind(this);
-  }
-  componentDidMount() {
-    this.resetHeight();
-    window.addEventListener('resize', this.resetHeight);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.resetHeight);
-  }
-
-  resetHeight() {
-    const innerHeight = document.body.offsetHeight;
-    this.setState({
-      height: innerHeight - 200,
-    });
   }
   render() {
-    const { direction } = this.props;
-    const { height } = this.state;
+    const { direction, wrapperHeight } = this.props;
 
     const width = direction === 'horizontal' ? 1050 : 950;
     return (
@@ -147,7 +134,7 @@ class Print extends Component {
             返回
           </Button>
         </ActionBar>
-        <PrintWrapper className="print-wrapper" style={{ width }} height={height}>
+        <PrintWrapper className="print-wrapper" style={{ width }} height={wrapperHeight}>
           <PrintArea id="section-to-print">
             { this.props.children }
           </PrintArea>

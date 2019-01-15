@@ -4,6 +4,9 @@ import styled, { css } from 'styled-components';
 import Print from '../src/print/index';
 import Break from '../src/break/index';
 
+const AppWrapper = styled.div`
+  padding: 20px;
+`;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,14 +15,13 @@ class App extends Component {
   }
   render() {
     return (
-      <Print direction="vertical" wrapperHeight={200}>
-      <p>first</p>
-      <p>second</p>
-      <p>third</p>
-      <p>first</p>
-      <p>second</p>
-      <p>third</p>
-    </Print>
+      <AppWrapper>
+        <Print direction="vertical" wrapperHeight={500}>
+          <p>first</p>
+          <p>second</p>
+          <p>third</p>
+        </Print>
+      </AppWrapper>
     );
   }
 }
