@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Print from '../src/index';
+import Print from '../src/print/index';
 import Break from '../src/break/index';
 
 const Button = styled.button`

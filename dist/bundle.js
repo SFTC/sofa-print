@@ -61,107 +61,21 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _index = __webpack_require__(1);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _index2.default;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// import PropTypes from 'prop-types';
-
-
-function handlePrint() {
-  window.print();
-}
-
-var Print = function (_Component) {
-  _inherits(Print, _Component);
-
-  function Print(props) {
-    _classCallCheck(this, Print);
-
-    var _this = _possibleConstructorReturn(this, (Print.__proto__ || Object.getPrototypeOf(Print)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Print, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'button',
-          { onClick: handlePrint },
-          '\u6253\u5370'
-        )
-      );
-    }
-  }]);
-
-  return Print;
-}(_react.Component);
-
-Print.propTypes = {};
-
-exports.default = Print;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = require("react");
 
 /***/ }),
-/* 3 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(4);
+var content = __webpack_require__(6);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -175,13 +89,13 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(6)(content, options);
+var update = __webpack_require__(8)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/dist/cjs.js!./style.css");
+	module.hot.accept("!!../node_modules/css-loader/dist/cjs.js!../node_modules/less-loader/dist/cjs.js!./style.less", function() {
+		var newContent = require("!!../node_modules/css-loader/dist/cjs.js!../node_modules/less-loader/dist/cjs.js!./style.less");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -207,17 +121,169 @@ if(false) {
 }
 
 /***/ }),
-/* 4 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(false);
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Break = exports.Print = undefined;
+
+var _index = __webpack_require__(3);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = __webpack_require__(10);
+
+var _index4 = _interopRequireDefault(_index3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Print = _index2.default;
+exports.Break = _index4.default;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n  background: #fff;\n  font-size: 14px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  border: 1px solid #ddd;\n  font-family: "NSimSun", "SimHei", "FangSong_GB2312";\n\n  ', '\n  @media print {\n    .page-container {\n      padding: 0 !important;\n    }\n  }\n'], ['\n  background: #fff;\n  font-size: 14px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  border: 1px solid #ddd;\n  font-family: "NSimSun", "SimHei", "FangSong_GB2312";\n\n  ', '\n  @media print {\n    .page-container {\n      padding: 0 !important;\n    }\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    height: ', 'px;\n  '], ['\n    height: ', 'px;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  margin: 0;\n'], ['\n  margin: 0;\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(4);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(5);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+__webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var PrintWrapper = _styledComponents2.default.div(_templateObject, function (props) {
+  return props.height && (0, _styledComponents.css)(_templateObject2, props.height);
+});
+
+var PrintArea = _styledComponents2.default.div(_templateObject3);
+
+var Print = function (_Component) {
+  _inherits(Print, _Component);
+
+  function Print(props) {
+    _classCallCheck(this, Print);
+
+    var _this = _possibleConstructorReturn(this, (Print.__proto__ || Object.getPrototypeOf(Print)).call(this, props));
+
+    _this.state = {
+      height: 300
+    };
+    _this.resetHeight = _this.resetHeight.bind(_this);
+    return _this;
+  }
+
+  _createClass(Print, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.resetHeight();
+      window.addEventListener('resize', this.resetHeight);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('resize', this.resetHeight);
+    }
+  }, {
+    key: 'resetHeight',
+    value: function resetHeight() {
+      var innerHeight = document.body.offsetHeight;
+      this.setState({
+        height: innerHeight - 200
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var direction = this.props.direction;
+      var height = this.state.height;
+
+
+      var width = direction === 'horizontal' ? 1050 : 950;
+      return _react2.default.createElement(
+        PrintWrapper,
+        { className: 'print-wrapper', style: { width: width }, height: height },
+        _react2.default.createElement(
+          PrintArea,
+          { id: 'section-to-print' },
+          this.props.children
+        )
+      );
+    }
+  }]);
+
+  return Print;
+}(_react.Component);
+
+Print.propTypes = {
+  children: _propTypes2.default.any,
+  direction: _propTypes2.default.string.isRequired,
+  wrapperHeight: _propTypes2.default.number.isRequired,
+  paddingZeroClassName: _propTypes2.default.string,
+  marginZeroClassName: _propTypes2.default.string,
+  displayNoneClassName: _propTypes2.default.string
+};
+
+exports.default = Print;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(7)(false);
 // Module
-exports.push([module.i, ".laba-header {\n  width: 100%;\n  height: 50px;\n  background: red;\n}\n", ""]);
+exports.push([module.i, ".break-page {\n  height: 20px;\n  background: #eee;\n  margin-top: 30px;\n  margin-left: -100px;\n  margin-right: -100px;\n  box-shadow: 0 -1px 1px 1px #ddd;\n}\n@media print {\n  body * {\n    visibility: hidden;\n  }\n  @page {\n    margin: 0px 0px;\n  }\n  .print-wrapper {\n    display: block !important;\n    overflow-y: auto !important;\n    height: auto !important;\n  }\n  #section-to-print {\n    margin-left: 0;\n    padding: 0;\n  }\n  #section-to-print,\n  #section-to-print * {\n    visibility: visible;\n  }\n  #section-to-print .break-page {\n    page-break-after: always;\n    height: 0px;\n    box-shadow: none;\n    margin-top: 0;\n  }\n  .action-bar {\n    height: 0;\n    display: none;\n  }\n}\n", ""]);
 
 
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -308,7 +374,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -377,7 +443,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(7);
+var	fixUrls = __webpack_require__(9);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -714,7 +780,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports) {
 
 
@@ -807,6 +873,32 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// 放置于待分页页面尾部，之后的内容会在打印时进入下一页
+var PrintBreakPage = function PrintBreakPage() {
+  return _react2.default.createElement('div', { className: 'break-page' });
+};
+
+exports.default = PrintBreakPage;
 
 /***/ })
 /******/ ]);
