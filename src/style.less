@@ -46,48 +46,46 @@
   }
 }
 
-#haha {
-  @media print {
-    body * {
-      visibility: hidden;
-    }
+@media print {
+  body * {
+    visibility: hidden;
+  }
 
-    @page {
-      margin: 0px 0px;
-    }
+  @page {
+    margin: 0px 0px;
+  }
 
-    #section-to-print {
-      // 打印区域样式
-      margin-left: 0;
-      padding: 0;
-    }
+  #section-to-print {
+    // 打印区域样式
+    margin-left: 0;
+    padding: 0;
+  }
 
-    #section-to-print, #section-to-print * {
-      visibility: visible;
-    }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
 
-    #section-to-print .break-page {
-      page-break-after: always;
-      height: 0px;
-      box-shadow: none;
-      margin-top: 0;
-    }
-    //具体页面需要重置的样式//
-    .action-bar {
-      height: 0;
-      display: none;
-    }
-    .print-bar, .sidebar, .show-menu-headerbar, .hide-menu-headerbar {
-      display: none !important;
-    }
-    .main-content {
-      margin-top: 0 !important;
-    }
+  #section-to-print .break-page {
+    page-break-after: always;
+    height: 0px;
+    box-shadow: none;
+    margin-top: 0;
+  }
+  //具体页面需要重置的样式//
+  .action-bar {
+    height: 0;
+    display: none;
+  }
+  .print-bar, .sidebar, .show-menu-headerbar, .hide-menu-headerbar {
+    display: none !important;
+  }
+  .main-content {
+    margin-top: 0 !important;
+  }
 
-    .show-menu {
-      width: calc(100%);
-      margin-left: 0;
-    }
+  .show-menu {
+    width: calc(100%);
+    margin-left: 0;
   }
 }
 

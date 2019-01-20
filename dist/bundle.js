@@ -158,9 +158,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  background: #fff;\n  font-size: 14px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  border: 1px solid #ddd;\n  font-family: "NSimSun", "SimHei", "FangSong_GB2312";\n\n  ', '\n  @media print {\n    .page-container {\n      padding: 0 !important;\n    }\n  }\n'], ['\n  background: #fff;\n  font-size: 14px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  border: 1px solid #ddd;\n  font-family: "NSimSun", "SimHei", "FangSong_GB2312";\n\n  ', '\n  @media print {\n    .page-container {\n      padding: 0 !important;\n    }\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    height: ', 'px;\n  '], ['\n    height: ', 'px;\n  ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  margin: 0;\n'], ['\n  margin: 0;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  line-height: 1.2;\n  display: inline-block;\n  font-weight: 400;\n  text-align: center;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 0 15px;\n  font-size: 12px;\n  border-radius: 4px;\n  height: 28px;\n  user-select: none;\n  transition: all .3s cubic-bezier(.645,.045,.355,1);\n  color: rgba(0,0,0,.65);\n  background-color: #fff;\n  border-color: #d9d9d9;\n  outline: none;\n'], ['\n  line-height: 1.2;\n  display: inline-block;\n  font-weight: 400;\n  text-align: center;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 0 15px;\n  font-size: 12px;\n  border-radius: 4px;\n  height: 28px;\n  user-select: none;\n  transition: all .3s cubic-bezier(.645,.045,.355,1);\n  color: rgba(0,0,0,.65);\n  background-color: #fff;\n  border-color: #d9d9d9;\n  outline: none;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: center;\n  height: 50px;\n  padding: 0 20px;\n  background: #f4f4f4;\n  box-shadow: 0 3px 5px #ccc;\n'], ['\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: center;\n  height: 50px;\n  padding: 0 20px;\n  background: #f4f4f4;\n  box-shadow: 0 3px 5px #ccc;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  width: 950px;\n  height: 800px;\n\n  // ', '\n  // ', '\n'], ['\n  width: 950px;\n  height: 800px;\n\n  // ', '\n  // ', '\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  //   body {\n  //     visibility: hidden !important;\n  //   }\n  //   #section-to-print {\n  //     margin-left: 0;\n  //     padding: 0;\n  //   }\n  //   #section-to-print, #section-to-print * {\n  //     visibility: visible;\n  //   }\n  //   #section-to-print .break-page {\n  //     page-break-after: always;\n  //     height: 0px;\n  //     box-shadow: none;\n  //     margin-top: 0;\n  //   }\n  //   //\u5177\u4F53\u9875\u9762\u9700\u8981\u91CD\u7F6E\u7684\u6837\u5F0F//\n  //   .action-bar {\n  //     height: 0;\n  //     display: none;\n  //   }\n  // '], ['\n  //   body {\n  //     visibility: hidden !important;\n  //   }\n  //   #section-to-print {\n  //     margin-left: 0;\n  //     padding: 0;\n  //   }\n  //   #section-to-print, #section-to-print * {\n  //     visibility: visible;\n  //   }\n  //   #section-to-print .break-page {\n  //     page-break-after: always;\n  //     height: 0px;\n  //     box-shadow: none;\n  //     margin-top: 0;\n  //   }\n  //   //\u5177\u4F53\u9875\u9762\u9700\u8981\u91CD\u7F6E\u7684\u6837\u5F0F//\n  //   .action-bar {\n  //     height: 0;\n  //     display: none;\n  //   }\n  // ']),
+    _templateObject5 = _taggedTemplateLiteral(['\n    // @media print {\n    //   body * {\n    //     visibility: hidden;\n    //   }\n    //   @page {\n    //     margin: 0px 0px;\n    //   }\n    //   .main-content {\n    //     margin-top: 0 !important;\n    //   }\n\n    //   .show-menu {\n    //     width: calc(100%);\n    //     margin-left: 0;\n    //   }\n    //   .print-bar, .sidebar, .show-menu-headerbar, .hide-menu-headerbar {\n    //     display: none;\n    //   }\n    //   // ', ' {\n    //   //   display: none !important;\n    //   // }\n    //   #section-to-print {\n    //     // \u6253\u5370\u533A\u57DF\u6837\u5F0F\n    //     margin-left: 0;\n    //     padding: 0;\n    //   }\n    //   #section-to-print, #section-to-print * {\n    //     visibility: visible;\n    //   }\n    //   #section-to-print .break-page {\n    //     page-break-after: always;\n    //     height: 0px;\n    //     box-shadow: none;\n    //     margin-top: 0;\n    //   }\n    //   //\u5177\u4F53\u9875\u9762\u9700\u8981\u91CD\u7F6E\u7684\u6837\u5F0F//\n    //   .action-bar {\n    //     height: 0;\n    //     display: none;\n    //   }\n    // }\n  // '], ['\n    // @media print {\n    //   body * {\n    //     visibility: hidden;\n    //   }\n    //   @page {\n    //     margin: 0px 0px;\n    //   }\n    //   .main-content {\n    //     margin-top: 0 !important;\n    //   }\n\n    //   .show-menu {\n    //     width: calc(100%);\n    //     margin-left: 0;\n    //   }\n    //   .print-bar, .sidebar, .show-menu-headerbar, .hide-menu-headerbar {\n    //     display: none;\n    //   }\n    //   // ', ' {\n    //   //   display: none !important;\n    //   // }\n    //   #section-to-print {\n    //     // \u6253\u5370\u533A\u57DF\u6837\u5F0F\n    //     margin-left: 0;\n    //     padding: 0;\n    //   }\n    //   #section-to-print, #section-to-print * {\n    //     visibility: visible;\n    //   }\n    //   #section-to-print .break-page {\n    //     page-break-after: always;\n    //     height: 0px;\n    //     box-shadow: none;\n    //     margin-top: 0;\n    //   }\n    //   //\u5177\u4F53\u9875\u9762\u9700\u8981\u91CD\u7F6E\u7684\u6837\u5F0F//\n    //   .action-bar {\n    //     height: 0;\n    //     display: none;\n    //   }\n    // }\n  // ']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  background: #fff;\n  font-size: 14px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  border: 1px solid #ddd;\n  font-family: "NSimSun", "SimHei", "FangSong_GB2312";\n\n  ', '\n'], ['\n  background: #fff;\n  font-size: 14px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  border: 1px solid #ddd;\n  font-family: "NSimSun", "SimHei", "FangSong_GB2312";\n\n  ', '\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n    height: ', 'px;\n  '], ['\n    height: ', 'px;\n  ']),
+    _templateObject8 = _taggedTemplateLiteral(['\n  margin: 0;\n'], ['\n  margin: 0;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -186,11 +191,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var PrintWrapper = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.height && (0, _styledComponents.css)(_templateObject2, props.height);
+var Button = _styledComponents2.default.button(_templateObject);
+
+var ActionBar = _styledComponents2.default.div(_templateObject2);
+var PageContainer = _styledComponents2.default.div(_templateObject3, function (props) {
+  return props.debugStyle && (0, _styledComponents.css)(_templateObject4);
+}, function (props) {
+  return !props.debugStyle && (0, _styledComponents.css)(_templateObject5, props.displayNoneClassName);
 });
 
-var PrintArea = _styledComponents2.default.div(_templateObject3);
+var PrintWrapper = _styledComponents2.default.div(_templateObject6, function (props) {
+  return props.height && (0, _styledComponents.css)(_templateObject7, props.height);
+});
+
+var PrintArea = _styledComponents2.default.div(_templateObject8);
+function handlePrint() {
+  window.print();
+}
 
 var Print = function (_Component) {
   _inherits(Print, _Component);
@@ -200,47 +217,46 @@ var Print = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Print.__proto__ || Object.getPrototypeOf(Print)).call(this, props));
 
-    _this.state = {
-      height: 300
-    };
-    _this.resetHeight = _this.resetHeight.bind(_this);
+    _this.state = {};
     return _this;
   }
 
   _createClass(Print, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.resetHeight();
-      window.addEventListener('resize', this.resetHeight);
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      window.removeEventListener('resize', this.resetHeight);
-    }
-  }, {
-    key: 'resetHeight',
-    value: function resetHeight() {
-      var innerHeight = document.body.offsetHeight;
-      this.setState({
-        height: innerHeight - 200
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var direction = this.props.direction;
-      var height = this.state.height;
+      var _props = this.props,
+          direction = _props.direction,
+          wrapperHeight = _props.wrapperHeight,
+          debugStyle = _props.debugStyle,
+          displayNoneClassName = _props.displayNoneClassName;
 
 
       var width = direction === 'horizontal' ? 1050 : 950;
       return _react2.default.createElement(
-        PrintWrapper,
-        { className: 'print-wrapper', style: { width: width }, height: height },
+        PageContainer,
+        { debugStyle: debugStyle, displayNoneClassName: displayNoneClassName },
         _react2.default.createElement(
-          PrintArea,
-          { id: 'section-to-print' },
-          this.props.children
+          ActionBar,
+          { className: 'action-bar' },
+          _react2.default.createElement(
+            Button,
+            { onClick: handlePrint, style: { marginRight: 10 } },
+            '\u6253\u5370'
+          ),
+          _react2.default.createElement(
+            Button,
+            { onClick: this.handleBack },
+            '\u8FD4\u56DE'
+          )
+        ),
+        _react2.default.createElement(
+          PrintWrapper,
+          { className: 'print-wrapper', style: { width: width }, height: wrapperHeight },
+          _react2.default.createElement(
+            PrintArea,
+            { id: 'section-to-print' },
+            this.props.children
+          )
         )
       );
     }
@@ -255,7 +271,8 @@ Print.propTypes = {
   wrapperHeight: _propTypes2.default.number.isRequired,
   paddingZeroClassName: _propTypes2.default.string,
   marginZeroClassName: _propTypes2.default.string,
-  displayNoneClassName: _propTypes2.default.string
+  displayNoneClassName: _propTypes2.default.string,
+  debugStyle: _propTypes2.default.bool
 };
 
 exports.default = Print;
@@ -278,7 +295,7 @@ module.exports = require("styled-components");
 
 exports = module.exports = __webpack_require__(7)(false);
 // Module
-exports.push([module.i, ".break-page {\n  height: 20px;\n  background: #eee;\n  margin-top: 30px;\n  margin-left: -100px;\n  margin-right: -100px;\n  box-shadow: 0 -1px 1px 1px #ddd;\n}\n@media print {\n  body * {\n    visibility: hidden;\n  }\n  @page {\n    margin: 0px 0px;\n  }\n  .print-wrapper {\n    display: block !important;\n    overflow-y: auto !important;\n    height: auto !important;\n  }\n  #section-to-print {\n    margin-left: 0;\n    padding: 0;\n  }\n  #section-to-print,\n  #section-to-print * {\n    visibility: visible;\n  }\n  #section-to-print .break-page {\n    page-break-after: always;\n    height: 0px;\n    box-shadow: none;\n    margin-top: 0;\n  }\n  .action-bar {\n    height: 0;\n    display: none;\n  }\n  .print-bar,\n  .sidebar,\n  .show-menu-headerbar,\n  .hide-menu-headerbar {\n    display: none !important;\n  }\n  .main-content {\n    margin-top: 0 !important;\n  }\n  .show-menu {\n    width: calc(100%);\n    margin-left: 0;\n  }\n}\n", ""]);
+exports.push([module.i, ".break-page {\n  height: 20px;\n  background: #eee;\n  margin-top: 30px;\n  margin-left: -100px;\n  margin-right: -100px;\n  box-shadow: 0 -1px 1px 1px #ddd;\n}\n#haha1 body * {\n  visibility: hidden;\n}\n#haha1 #section-to-print {\n  margin-left: 0;\n  padding: 0;\n}\n#haha1 #section-to-print,\n#haha1 #section-to-print * {\n  visibility: visible;\n}\n#haha1 #section-to-print .break-page {\n  page-break-after: always;\n  height: 0px;\n  box-shadow: none;\n  margin-top: 0;\n}\n#haha1 .action-bar {\n  height: 0;\n  display: none;\n}\n#haha1 .print-bar,\n#haha1 .sidebar,\n#haha1 .show-menu-headerbar,\n#haha1 .hide-menu-headerbar {\n  display: none !important;\n}\n#haha1 .main-content {\n  margin-top: 0 !important;\n}\n#haha1 .show-menu {\n  width: calc(100%);\n  margin-left: 0;\n}\n@media print {\n  body * {\n    visibility: hidden;\n  }\n  @page {\n    margin: 0px 0px;\n  }\n  #section-to-print {\n    margin-left: 0;\n    padding: 0;\n  }\n  #section-to-print,\n  #section-to-print * {\n    visibility: visible;\n  }\n  #section-to-print .break-page {\n    page-break-after: always;\n    height: 0px;\n    box-shadow: none;\n    margin-top: 0;\n  }\n  .action-bar {\n    height: 0;\n    display: none;\n  }\n  .print-bar,\n  .sidebar,\n  .show-menu-headerbar,\n  .hide-menu-headerbar {\n    display: none !important;\n  }\n  .main-content {\n    margin-top: 0 !important;\n  }\n  .show-menu {\n    width: calc(100%);\n    margin-left: 0;\n  }\n}\n", ""]);
 
 
 
