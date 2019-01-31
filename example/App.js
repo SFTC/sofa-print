@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import Print from '../src/print/index';
-import Break from '../src/break/index';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import PrintPage from './containers/PrintPage';
+import './style.less';
 
-const AppWrapper = styled.div`
-  padding: 20px;
+const AppContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+`;
+
+const BodyContainer = styled.div`
+  display: flex;
+  height: calc(100% - 60px);
+`;
+
+const MainContent = styled.div`
+  flex: 1;
+  overflow: scroll;
 `;
 class App extends Component {
   constructor(props) {
@@ -15,13 +27,15 @@ class App extends Component {
   }
   render() {
     return (
-      <AppWrapper>
-        <Print direction="vertical" wrapperHeight={500}>
-          <p>first</p>
-          <p>second</p>
-          <p>third</p>
-        </Print>
-      </AppWrapper>
+      <AppContainer>
+        <Header />
+        <BodyContainer>
+          <Menu />
+          <MainContent>
+            <PrintPage />
+          </MainContent>
+        </BodyContainer>
+      </AppContainer>
     );
   }
 }

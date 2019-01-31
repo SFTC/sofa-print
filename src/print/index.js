@@ -38,73 +38,6 @@ const ActionBar = styled.div`
 const PageContainer = styled.div`
   width: 950px;
   height: 800px;
-
-  // ${(props) => props.debugStyle && css`
-  //   body {
-  //     visibility: hidden !important;
-  //   }
-  //   #section-to-print {
-  //     margin-left: 0;
-  //     padding: 0;
-  //   }
-  //   #section-to-print, #section-to-print * {
-  //     visibility: visible;
-  //   }
-  //   #section-to-print .break-page {
-  //     page-break-after: always;
-  //     height: 0px;
-  //     box-shadow: none;
-  //     margin-top: 0;
-  //   }
-  //   //具体页面需要重置的样式//
-  //   .action-bar {
-  //     height: 0;
-  //     display: none;
-  //   }
-  // `}
-  // ${(props) => !props.debugStyle && css`
-    // @media print {
-    //   body * {
-    //     visibility: hidden;
-    //   }
-    //   @page {
-    //     margin: 0px 0px;
-    //   }
-    //   .main-content {
-    //     margin-top: 0 !important;
-    //   }
-
-    //   .show-menu {
-    //     width: calc(100%);
-    //     margin-left: 0;
-    //   }
-    //   .print-bar, .sidebar, .show-menu-headerbar, .hide-menu-headerbar {
-    //     display: none;
-    //   }
-    //   // ${props.displayNoneClassName} {
-    //   //   display: none !important;
-    //   // }
-    //   #section-to-print {
-    //     // 打印区域样式
-    //     margin-left: 0;
-    //     padding: 0;
-    //   }
-    //   #section-to-print, #section-to-print * {
-    //     visibility: visible;
-    //   }
-    //   #section-to-print .break-page {
-    //     page-break-after: always;
-    //     height: 0px;
-    //     box-shadow: none;
-    //     margin-top: 0;
-    //   }
-    //   //具体页面需要重置的样式//
-    //   .action-bar {
-    //     height: 0;
-    //     display: none;
-    //   }
-    // }
-  // `}
 `;
 
 const PrintWrapper = styled.div`
@@ -133,7 +66,7 @@ class Print extends Component {
     };
   }
   render() {
-    const { direction, wrapperHeight, debugStyle, displayNoneClassName } = this.props;
+    const { direction, wrapperHeight } = this.props;
 
     const width = direction === 'horizontal' ? 1050 : 950;
     return (
@@ -160,10 +93,6 @@ Print.propTypes = {
   children: PropTypes.any,
   direction: PropTypes.string.isRequired,
   wrapperHeight: PropTypes.number.isRequired,
-  paddingZeroClassName: PropTypes.string,
-  marginZeroClassName: PropTypes.string,
-  displayNoneClassName: PropTypes.string,
-  debugStyle: PropTypes.bool,
 }
 
 export default Print;
