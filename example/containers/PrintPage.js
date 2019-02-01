@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import Print from '../../src/printPage';
+// import Print from '../../src/printPage';
 
 const PageWrapper = styled.div`
   padding: 20px;
@@ -17,10 +17,10 @@ class PrintPage extends Component {
     const { orderList, skuList } = this.state;
     return (
       <div>
-        <Print
+        {/* <Print
           trigger={() => <a href="#">Print this out!</a>}
           content={() => this.componentRef}
-        />
+        /> */}
         <PageWrapper id="print-wrapper" ref={el => (this.componentRef = el)}>
           {orderList.map((order) => (
             <div key={order}>
@@ -55,6 +55,7 @@ class PrintPage extends Component {
                   ))}
                 </tbody>
               </table>
+              <div className="break-page"></div>
             </div>
           ))}
         </PageWrapper>

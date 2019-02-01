@@ -2,9 +2,32 @@ li:not(.different) {
   color: red;
 }
 
-// div:not(.menu) {
-//   display: yellow;
+// #header, #menu {
+//   display: none;
 // }
+
+// #print-wrapper {
+//   overflow: scroll;
+// }
+
+// .break-page {
+//   page-break-after: always;
+// }
+
+@media print {
+  #print-wrapper, #sprint-wrapper * {
+    visibility: visible;
+  }
+  #print-wrapper {
+    // overflow-y: scroll !important;
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
+  .break-page {
+    page-break-after: always;
+  }
+}
 
 // #print-wrapper, #print-wrapper * {
 //   visibility: visible;

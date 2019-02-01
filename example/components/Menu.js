@@ -14,7 +14,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <MenuContainer className="menu">
+      <MenuContainer id="menu">
         <ul>
           <li>menu 1</li>
           <li className="different">menu 2</li>
