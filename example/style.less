@@ -2,24 +2,16 @@ li:not(.different) {
   color: red;
 }
 
-// #header, #menu {
-//   display: none;
-// }
-
-// #print-wrapper {
-//   overflow: scroll;
-// }
-
-// .break-page {
-//   page-break-after: always;
-// }
-
 @media print {
-  #print-wrapper, #sprint-wrapper * {
-    visibility: visible;
+  * {
+    position: relative !important;
+    height: auto !important;
   }
+  #header, #menu {
+    display: none;
+  }
+
   #print-wrapper {
-    // overflow-y: scroll !important;
     overflow-y: auto !important;
     height: auto !important;
   }
@@ -28,7 +20,3 @@ li:not(.different) {
     page-break-after: always;
   }
 }
-
-// #print-wrapper, #print-wrapper * {
-//   visibility: visible;
-// }

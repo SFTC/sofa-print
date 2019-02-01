@@ -15,14 +15,14 @@ class Header extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    const printComponent = document.getElementById('print-wrapper');
-    const app = document.getElementById('app');
-    console.log('app', app);
-    const child = app.firstChild;
-    console.log('000000', child);
-    app.removeChild(child);
+    // const printComponent = document.getElementById('print-wrapper');
+    // const app = document.getElementById('app');
+    // console.log('app', app);
+    // const child = app.firstChild;
+    // console.log('000000', child);
+    // app.removeChild(child);
     // app.appendChild(printComponent);
-    // window.print();
+    window.print();
     // console.log('11111111', child);
     // app.removeChild(printComponent);
     // console.log('llllll', child);
