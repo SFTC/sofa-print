@@ -27,7 +27,7 @@ class App extends Component {
   }
   render() {
     return (
-      <AppContainer>
+      <AppContainer id="app-container">
         <Header />
         <BodyContainer>
           <Menu />

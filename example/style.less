@@ -4,17 +4,14 @@ li:not(.different) {
 
 @media print {
   * {
-    position: relative !important;
-    height: auto !important;
+    // position: relative !important;
   }
-  #header, #menu {
-    display: none;
+  #app-container {
+    height: auto;
   }
-
-  #print-wrapper {
-    overflow-y: auto !important;
-    height: auto !important;
-  }
+  // #header, #menu {
+  //   display: none;
+  // }
 
   .break-page {
     page-break-after: always;
