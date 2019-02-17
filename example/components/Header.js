@@ -33,7 +33,6 @@ class Header extends Component {
     return (
       <HeaderBar id="header">
         <h1>print example</h1>
-        <button onClick={this.handleClick}>click</button>
       </HeaderBar>
     );
   }

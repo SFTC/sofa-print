@@ -1,7 +1,7 @@
-import Print from './print/index';
-import Break from './break/index';
+import PrintPage from './printPage/index';
+import PageBreak from './pageBreak/index';
 
 export {
-  Print,
-  Break,
+  PrintPage,
+  PageBreak,
 };
