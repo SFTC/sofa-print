@@ -191,7 +191,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  page-break-after: always;\n  height: 20px;\n  background: #eee;\n  box-shadow: 0 -1px 1px 1px #ddd;\n\n  @media print {\n    * {\n      position: relative !important;\n    }\n    height: 0px;\n    box-shadow: none;\n  }\n'], ['\n  page-break-after: always;\n  height: 20px;\n  background: #eee;\n  box-shadow: 0 -1px 1px 1px #ddd;\n\n  @media print {\n    * {\n      position: relative !important;\n    }\n    height: 0px;\n    box-shadow: none;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  page-break-after: always;\n  height: 20px;\n  background: #eee;\n  box-shadow: 0 -1px 1px 1px #ddd;\n\n  @media print {\n    height: 0px;\n    box-shadow: none;\n  }\n'], ['\n  page-break-after: always;\n  height: 20px;\n  background: #eee;\n  box-shadow: 0 -1px 1px 1px #ddd;\n\n  @media print {\n    height: 0px;\n    box-shadow: none;\n  }\n']);
 
 var _react = __webpack_require__(0);
 

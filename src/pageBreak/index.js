@@ -8,9 +8,6 @@ const BreakBox = styled.div`
   box-shadow: 0 -1px 1px 1px #ddd;
 
   @media print {
-    * {
-      position: relative !important;
-    }
     height: 0px;
     box-shadow: none;
   }
