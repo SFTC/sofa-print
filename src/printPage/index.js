@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactToPrint from "react-to-print";
-
-class Print extends React.Component {
+class PrintPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,4 +27,4 @@ class Print extends React.Component {
   }
 }
 
-export default Print;
+export default PrintPage;

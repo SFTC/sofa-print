@@ -7,32 +7,21 @@ const HeaderBar = styled.div`
   background: #eee;
   display: flex;
 `;
+
+const HeadeTitle = styled.h1`
+  position: absolute;
+  left: 30px;
+`;
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    // const printComponent = document.getElementById('print-wrapper');
-    // const app = document.getElementById('app');
-    // console.log('app', app);
-    // const child = app.firstChild;
-    // console.log('000000', child);
-    // app.removeChild(child);
-    // app.appendChild(printComponent);
-    window.print();
-    // console.log('11111111', child);
-    // app.removeChild(printComponent);
-    // console.log('llllll', child);
-    // app.appendChild(child);
-    // console.log('click', printComponent, app.childNodes);
   }
   render() {
     return (
       <HeaderBar id="header">
-        <h1>print example</h1>
+        <HeadeTitle>print example</HeadeTitle>
       </HeaderBar>
     );
   }

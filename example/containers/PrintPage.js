@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Print from '../../src/printPage/index';
+import PageBreak from '../../src/pageBreak/index';
 
 const PageWrapper = styled.div`
   padding: 0 20px;
@@ -65,7 +66,7 @@ class PrintPage extends Component {
                     ))}
                   </tbody>
                 </table>
-                <div className="break-page"></div>
+                <PageBreak />
               </div>
             ))}
           </PageWrapper>

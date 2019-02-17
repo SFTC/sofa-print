@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import PrintPage from './containers/PrintPage';
-import './style.less';
 
 const AppContainer = styled.div`
   width: 100%;
