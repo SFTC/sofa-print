@@ -9,14 +9,14 @@ class PrintPage extends React.Component {
   }
 
   printMethod() {
-    document.getElementById('print-button').click();
+    document.getElementById('sofa-print-button').click();
   }
 
   render() {
     return (
       <div>
         <ReactToPrint
-          trigger={() => <a style={{ visibility: 'hidden' }} id="print-button" href="#"></a>}
+          trigger={() => <a style={{ visibility: 'hidden' }} id="sofa-print-button" href="#"></a>}
           content={() => this.componentRef}
         />
         <div ref={(el) => (this.componentRef = el)}>

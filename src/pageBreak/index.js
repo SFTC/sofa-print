@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style.less';
+import '../style.css';
 
 const PageBreak = () => (<div className="sofa-print-page-break" />);
 
