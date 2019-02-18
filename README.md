@@ -55,7 +55,7 @@ class PrintOrderDetail extends Component {
       <div>
         <button onClick={this.handlePrint}>打印</button>
         <PrintPage ref="printComponent">
-          <PageWrapper>
+          <div>
             {orderList.map((order) => (
               <div key={order}>
                 <h2>order detail table</h2>
@@ -80,8 +80,8 @@ class PrintOrderDetail extends Component {
                 <PageBreak />
               </div>
             ))}
-          </PageWrapper>
-        </Print>
+          </div>
+        </PrintPage>
       </div>
     );
   }
