@@ -3,7 +3,8 @@ React print component.
 
 ## 开发&调式
 
-```
+
+```bash
 # 在http://localhost:8081端口打开示例页面
 
 npm run dev
@@ -15,7 +16,7 @@ npm link
 
 ## 发布
 
-```
+```bash
 npm run build
 
 npm login
@@ -25,13 +26,13 @@ npm publish
 
 ## 安装
 
-```
+```bash
 npm install sofa-print
 ```
 
 ## 使用
 
-```
+```js
 import React, { Component } from 'react';
 import { PrintPage, PageBreak } from 'sofa-print';
 import 'sofa-print/dist/main.css';
