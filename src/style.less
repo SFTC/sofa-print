@@ -1,5 +1,17 @@
+.sofa-print-page-break {
+  page-break-after: always;
+  height: 20px;
+  background: #eee;
+  box-shadow: 0 -1px 1px 1px #ddd;
+}
+
 @media print {
   * {
     position: relative !important;
+  }
+  .sofa-print-page-break {
+    page-break-after: always;
+    height: 0px;
+    box-shadow: none;
   }
 }
