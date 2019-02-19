@@ -1,5 +1,14 @@
 import React from 'react';
 import ReactToPrint from "react-to-print";
+import styled from 'styled-components';
+
+const PreviewBox = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 50px 100px;
+  background-color: #333;
+`;
+
 class PrintPage extends React.Component {
   constructor(props) {
     super(props);

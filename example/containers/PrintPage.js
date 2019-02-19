@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Print from '../../src/printPage/index';
+import PrintPage from '../../src/printPage/index';
 import PageBreak from '../../src/pageBreak/index';
 
 const PageWrapper = styled.div`
@@ -14,7 +14,7 @@ const Button = styled.button`
   margin-top: 20px;
   margin-left: 20px;
 `;
-class PrintPage extends Component {
+class PrintOrderComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,8 +31,8 @@ class PrintPage extends Component {
     return (
       <div>
         <Button onClick={this.handlePrint}>打印</Button>
-        <Print ref="printComponent">
-          <PageWrapper>
+        <PrintPage>
+          <PageWrapper ref="printComponent">
             {orderList.map((order) => (
               <div key={order}>
                 <h2>order detail table</h2>
@@ -70,13 +70,13 @@ class PrintPage extends Component {
               </div>
             ))}
           </PageWrapper>
-        </Print>
+        </PrintPage>
       </div>
     );
   }
 }
 
-PrintPage.propTypes = {
+PrintOrderComponent.propTypes = {
 }
 
-export default PrintPage;
+export default PrintOrderComponent;
