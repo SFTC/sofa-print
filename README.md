@@ -94,7 +94,7 @@ class PrintOrderDetail extends Component {
 2. 有预览样式
 
 
-```
+```js
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { PrintPage, PageBreak } from 'sofa-print';
