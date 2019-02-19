@@ -5,6 +5,7 @@ import PageBreak from '../../src/pageBreak/index';
 
 const PageWrapper = styled.div`
   padding: 0 20px;
+  background-color: #fff;
 `;
 const Button = styled.button`
   display: inline-block;
@@ -31,10 +32,10 @@ class PrintOrderComponent extends Component {
     return (
       <div>
         <Button onClick={this.handlePrint}>打印</Button>
-        <PrintPage>
-          <PageWrapper ref="printComponent">
-            {orderList.map((order) => (
-              <div key={order}>
+        <PrintPage ref="printComponent" previewStyle={true}>
+          {orderList.map((order) => (
+            <div key={order}>
+              <PageWrapper>
                 <h2>order detail table</h2>
                 <table>
                   <thead>
@@ -66,10 +67,10 @@ class PrintOrderComponent extends Component {
                     ))}
                   </tbody>
                 </table>
-                <PageBreak />
-              </div>
-            ))}
-          </PageWrapper>
+              </PageWrapper>
+              <PageBreak />
+            </div>
+          ))}
         </PrintPage>
       </div>
     );
