@@ -23,16 +23,20 @@ class PrintOrderComponent extends Component {
       skuList: [1, 2, 3, 4],
     };
     this.handlePrint = this.handlePrint.bind(this);
+    this.handleGoBack = this.handleGoBack.bind(this);
   }
   handlePrint() {
     this.refs.printComponent.printMethod();
+  }
+  handleGoBack() {
+    window.location.href = 'https://baidu.com';
   }
   render() {
     const { orderList, skuList } = this.state;
     return (
       <div>
-        <Button onClick={this.handlePrint}>打印</Button>
-        <PrintPage ref="printComponent" previewStyle={true}>
+        {/* <Button onClick={this.handlePrint}>打印</Button> */}
+        <PrintPage ref="printComponent" previewStyle={true} goBack={this.handleGoBack}>
           {orderList.map((order) => (
             <div key={order}>
               <PageWrapper>

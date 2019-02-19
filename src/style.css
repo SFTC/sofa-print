@@ -1,6 +1,7 @@
 .sofa-print-page-break {
   page-break-after: always;
   height: 20px;
+  position: relative
 }
 @media print {
   * {
