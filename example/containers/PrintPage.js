@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import PrintPage from '../../src/printPage/index';
-import PageBreak from '../../src/pageBreak/index';
+import * as sofaPrint from '../../src/index';
+
+const PrintPage = sofaPrint.PrintPage;
+const PageBreak = sofaPrint.PageBreak;
 
 const PageWrapper = styled.div`
   padding: 0 20px;

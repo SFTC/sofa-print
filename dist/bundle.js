@@ -101,7 +101,7 @@ var _index = __webpack_require__(1);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(4);
+var _index3 = __webpack_require__(7);
 
 var _index4 = _interopRequireDefault(_index3);
 
@@ -123,13 +123,29 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _templateObject = _taggedTemplateLiteral(['\n  height: 100%;\n  box-sizing: content-box;\n  background-color: #f5f5f5;\n  ', '\n'], ['\n  height: 100%;\n  box-sizing: content-box;\n  background-color: #f5f5f5;\n  ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    width: ', 'px;\n    padding: 0 calc((100% - ', 'px)/2);\n  '], ['\n    width: ', 'px;\n    padding: 0 calc((100% - ', 'px)/2);\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  ', '\n  height: 50px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  position: fixed;\n  z-index: 1;\n  background: #f4f4f4;\n  box-shadow: 0 3px 5px #ccc;\n'], ['\n  ', '\n  height: 50px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  position: fixed;\n  z-index: 1;\n  background: #f4f4f4;\n  box-shadow: 0 3px 5px #ccc;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    width: ', 'px;\n  '], ['\n    width: ', 'px;\n  ']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  line-height: 1.2;\n  display: inline-block;\n  font-weight: 400;\n  text-align: center;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 0 15px;\n  font-size: 12px;\n  border-radius: 4px;\n  height: 28px;\n  user-select: none;\n  transition: all .3s cubic-bezier(.645,.045,.355,1);\n  color: rgba(0,0,0,.65);\n  background-color: #fff;\n  border-color: #d9d9d9;\n  outline: none;\n  margin-right: 10px;\n'], ['\n  line-height: 1.2;\n  display: inline-block;\n  font-weight: 400;\n  text-align: center;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 0 15px;\n  font-size: 12px;\n  border-radius: 4px;\n  height: 28px;\n  user-select: none;\n  transition: all .3s cubic-bezier(.645,.045,.355,1);\n  color: rgba(0,0,0,.65);\n  background-color: #fff;\n  border-color: #d9d9d9;\n  outline: none;\n  margin-right: 10px;\n']);
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactToPrint = __webpack_require__(3);
+var _propTypes = __webpack_require__(3);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactToPrint = __webpack_require__(4);
 
 var _reactToPrint2 = _interopRequireDefault(_reactToPrint);
+
+var _styledComponents = __webpack_require__(5);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+__webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -138,6 +154,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var PreviewBox = _styledComponents2.default.div(_templateObject, function (props) {
+  return props.pageWidth && (0, _styledComponents.css)(_templateObject2, props.pageWidth, props.pageWidth);
+});
+
+var ActionBar = _styledComponents2.default.div(_templateObject3, function (props) {
+  return props.pageWidth && (0, _styledComponents.css)(_templateObject4, props.pageWidth);
+});
+
+var Button = _styledComponents2.default.button(_templateObject5);
 
 var PrintPage = function (_React$Component) {
   _inherits(PrintPage, _React$Component);
@@ -149,6 +177,8 @@ var PrintPage = function (_React$Component) {
 
     _this.state = {};
     _this.printMethod = _this.printMethod.bind(_this);
+    _this.handlePrint = _this.handlePrint.bind(_this);
+    _this.handleGoBack = _this.handleGoBack.bind(_this);
     return _this;
   }
 
@@ -158,9 +188,24 @@ var PrintPage = function (_React$Component) {
       document.getElementById('sofa-print-button').click();
     }
   }, {
+    key: 'handlePrint',
+    value: function handlePrint() {
+      this.printMethod();
+    }
+  }, {
+    key: 'handleGoBack',
+    value: function handleGoBack() {
+      this.props.goBack();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
+
+      var _props = this.props,
+          previewStyle = _props.previewStyle,
+          pageWidth = _props.pageWidth,
+          showGoBackButton = _props.showGoBackButton;
 
       return _react2.default.createElement(
         'div',
@@ -173,7 +218,32 @@ var PrintPage = function (_React$Component) {
             return _this2.componentRef;
           }
         }),
-        _react2.default.createElement(
+        previewStyle ? _react2.default.createElement(
+          PreviewBox,
+          { pageWidth: pageWidth },
+          _react2.default.createElement(
+            ActionBar,
+            { pageWidth: pageWidth },
+            showGoBackButton && _react2.default.createElement(
+              Button,
+              { onClick: this.handleGoBack },
+              '\u8FD4\u56DE'
+            ),
+            _react2.default.createElement(
+              Button,
+              { onClick: this.handlePrint },
+              '\u6253\u5370'
+            )
+          ),
+          _react2.default.createElement('div', { style: { height: '53px' } }),
+          _react2.default.createElement(
+            'div',
+            { ref: function ref(el) {
+                return _this2.componentRef = el;
+              } },
+            this.props.children
+          )
+        ) : _react2.default.createElement(
           'div',
           { ref: function ref(el) {
               return _this2.componentRef = el;
@@ -187,6 +257,19 @@ var PrintPage = function (_React$Component) {
   return PrintPage;
 }(_react2.default.Component);
 
+PrintPage.propTypes = {
+  previewStyle: _propTypes2.default.bool,
+  pageWidth: _propTypes2.default.number,
+  goBack: _propTypes2.default.func,
+  showGoBackButton: _propTypes2.default.bool
+};
+PrintPage.defaultProps = {
+  previewStyle: false,
+  pageWidth: 764,
+  showGoBackButton: true,
+  goBack: undefined
+};
+
 exports.default = PrintPage;
 
 /***/ }),
@@ -199,10 +282,28 @@ module.exports = require("react");
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-to-print");
+module.exports = require("prop-types");
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-to-print");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -216,7 +317,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(5);
+__webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -225,12 +326,6 @@ var PageBreak = function PageBreak() {
 };
 
 exports.default = PageBreak;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ })
 /******/ ]);
