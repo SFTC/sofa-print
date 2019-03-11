@@ -158,7 +158,6 @@ export default PrintOrderComponent;
 
 ```
 
-
 ## API
 
 1. PrintPage组件
@@ -177,8 +176,7 @@ export default PrintOrderComponent;
 
 |属性|类型|默认值|说明
 |:--:|:-----|:-----|:-----|
-|**`pageWidth`**|number|764|设置打印纸的宽度
-|**`previewStyle`**|boolean|false|是否展示预览样式，设置为true，会展示‘打印’和‘返回’按钮；
+|**`previewStyle`**|boolean|false|是否展示预览样式，设置为true，会展示‘打印’和‘返回’按钮
+|**`pageWidth`**|number|764|设置打印纸的宽度，previewStyle为true时有效
 |**`showGoBackButton`**|boolean|true|是否展示返回按钮，previewStyle为true时有效
 |**`goBack`**|function|undefined|点击返回按钮的回调函数，previewStyle为true时有效
-
