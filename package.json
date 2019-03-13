@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/SFTC/sofa-print#readme",
   "dependencies": {
+    "babel-polyfill": "6.23.0",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "react": "^16.7.0",
@@ -36,10 +37,21 @@
     "styled-components": "2.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.1.0",
+    "babel-plugin-dynamic-import-node": "1.0.2",
+    "babel-plugin-react-intl": "2.3.1",
+    "babel-plugin-react-transform": "2.0.2",
+    "babel-plugin-styled-components": "1.1.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-inline-elements": "6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.5",
+    "babel-preset-env": "1.5.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
@@ -51,9 +63,30 @@
     "webpack-node-externals": "^1.7.2"
   },
   "babel": {
+    "plugins": [
+      "styled-components"
+    ],
     "presets": [
-      "env",
-      "react"
-    ]
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "react",
+      "stage-0"
+    ],
+    "env": {
+      "production": {
+        "only": [
+          "src"
+        ],
+        "plugins": [
+          "transform-react-remove-prop-types",
+          "transform-react-constant-elements",
+          "transform-react-inline-elements"
+        ]
+      }
+    }
   }
 }

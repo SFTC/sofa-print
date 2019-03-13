@@ -51,23 +51,15 @@ const Button = styled.button`
   margin-right: 10px;
 `;
 class PrintPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-    this.printMethod = this.printMethod.bind(this);
-    this.handlePrint = this.handlePrint.bind(this);
-    this.handleGoBack = this.handleGoBack.bind(this);
-  }
 
-  printMethod() {
+  printMethod = () => {
     document.getElementById('sofa-print-button').click();
   }
 
-  handlePrint() {
+  handlePrint = () => {
     this.printMethod();
   }
-  handleGoBack() {
+  handleGoBack = () => {
     this.props.goBack();
   }
 
