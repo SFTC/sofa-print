@@ -190,7 +190,9 @@ var PrintPage = function (_React$Component) {
           },
           content: function content() {
             return _this2.componentRef;
-          }
+          },
+          onAfterPrint: this.props.onAfterPrint,
+          onBeforePrint: this.props.onBeforePrint
         }),
         previewStyle ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
           PreviewBox,
@@ -235,13 +237,17 @@ PrintPage.propTypes = {
   previewStyle: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
   pageWidth: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   goBack: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  onBeforePrint: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  onAfterPrint: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   showGoBackButton: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 PrintPage.defaultProps = {
   previewStyle: false,
   pageWidth: 764,
   showGoBackButton: true,
-  goBack: undefined
+  goBack: undefined,
+  onBeforePrint: undefined,
+  onAfterPrint: undefined
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PrintPage);

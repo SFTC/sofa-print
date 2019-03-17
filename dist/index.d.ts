@@ -7,13 +7,15 @@ import * as PropTypes from 'prop-types';
 export = sofaPrint
 declare module sofaPrint {
 
-  export function PageBreak(): React.ReactElement<any>;
+  export function PageBreak(): React.ReactElement<any, any>;
 
-  export class PrintPage extends React.Component<PrintPage.PrintPageProps> {
+  export class PrintPage extends React.Component<PrintPage.PrintPageProps, any> {
     static propTypes: {
       previewStyle: PropTypes.Requireable<boolean>,
       pageWidth: PropTypes.Requireable<number>,
       goBack: PropTypes.Requireable<PrintPage.PrintCallbackFn>,
+      onBeforePrint: PropTypes.Requireable<PrintPage.PrintCallbackFn>,
+      onAfterPrint: PropTypes.Requireable<PrintPage.PrintCallbackFn>,
       showGoBackButton: PropTypes.Requireable<boolean>,
     };
     static defaultProps: Partial<PrintPage.PrintPageProps>;
@@ -22,7 +24,7 @@ declare module sofaPrint {
     printMethod(): () => void;
     handlePrint(): () => void;
     handleGoBack(): () => void;
-    render(): React.ReactElement<any>;
+    render(): React.ReactElement<any, any>;
   }
 
   namespace PrintPage {
@@ -33,6 +35,8 @@ declare module sofaPrint {
       pageWidth: number,
       goBack: PrintCallbackFn,
       showGoBackButton: boolean,
+      onBeforePrint?: PrintCallbackFn,
+      onAfterPrint?: PrintCallbackFn,
     }
   }
 }

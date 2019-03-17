@@ -9,7 +9,7 @@ React print component.
 
 npm run dev
 
-# 将打包之后的组件引入到 global node_modules 中
+# 将打包之后的组件映射到 global node_modules 中
 
 npm link
 ```
@@ -40,15 +40,11 @@ import { PrintPage, PageBreak } from 'sofa-print';
 import 'sofa-print/dist/main.css';
 
 class PrintOrderDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  this.state = {
       orderList: [1, 2, 3, 4, 5],
       skuList: [1, 2, 3, 4],
     };
-    this.handlePrint = this.handlePrint.bind(this);
-  }
-  handlePrint() {
+  handlePrin = () => {
     this.refs.printComponent.printMethod();
   }
   render() {
@@ -106,22 +102,18 @@ const PageWrapper = styled.div`
 `;
 
 class PrintOrderComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  this.state = {
       orderList: [1, 2, 3, 4, 5],
       skuList: [1, 2, 3, 4],
     };
-    this.handleGoBack = this.handleGoBack.bind(this);
-  }
-  handleGoBack() {
+  handleGoBack = () => {
     window.location.href = 'https://baidu.com';
   }
   render() {
     const { orderList, skuList } = this.state;
     return (
       <div>
-        <PrintPage ref="printComponent" previewStyle={true} goBack={this.handleGoBack}>
+        <PrintPage previewStyle={true} goBack={this.handleGoBack}>
           {orderList.map((order) => (
             <div key={order}>
               <PageWrapper>
@@ -176,6 +168,7 @@ export default PrintOrderComponent;
 
 |属性|类型|默认值|说明
 |:--:|:-----|:-----|:-----|
+|**`onBeforePrint`**|function|undefined|打印动作之前的回调函数
 |**`previewStyle`**|boolean|false|是否展示预览样式，设置为true，会展示‘打印’和‘返回’按钮
 |**`pageWidth`**|number|764|设置打印纸的宽度，previewStyle为true时有效
 |**`showGoBackButton`**|boolean|true|是否展示返回按钮，previewStyle为true时有效

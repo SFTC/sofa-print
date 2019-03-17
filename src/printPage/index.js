@@ -70,6 +70,8 @@ class PrintPage extends React.Component {
         <ReactToPrint
           trigger={() => <a style={{ visibility: 'hidden' }} id="sofa-print-button" href="#"></a>}
           content={() => this.componentRef}
+          onAfterPrint={this.props.onAfterPrint}
+          onBeforePrint={this.props.onBeforePrint}
         />
         {previewStyle ?
           <PreviewBox pageWidth={pageWidth}>
@@ -95,6 +97,8 @@ PrintPage.propTypes = {
   previewStyle: PropTypes.bool,
   pageWidth: PropTypes.number,
   goBack: PropTypes.func,
+  onBeforePrint: PropTypes.func,
+  onAfterPrint: PropTypes.func,
   showGoBackButton: PropTypes.bool,
 }
 PrintPage.defaultProps = {
@@ -102,6 +106,8 @@ PrintPage.defaultProps = {
   pageWidth: 764,
   showGoBackButton: true,
   goBack: undefined,
+  onBeforePrint: undefined,
+  onAfterPrint: undefined,
 }
 
 export default PrintPage;
