@@ -1,6 +1,6 @@
 {
   "name": "sofa-print",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react print component",
   "main": "dist/bundle.js",
   "files": [
@@ -33,7 +33,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.2.0",
     "react-proptypes": "^1.0.0",
-    "react-to-print": "^2.0.0-alpha-6",
+    "react-to-print": "2.0.0-alpha-6",
     "styled-components": "2.0.0"
   },
   "devDependencies": {
