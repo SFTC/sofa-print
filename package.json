@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "react print component",
   "main": "dist/bundle.js",
+  "tpes": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -31,7 +32,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.2.0",
     "react-proptypes": "^1.0.0",
-    "react-to-print": "2.0.0-alpha-6",
+    "react-to-print": "^2.1.2",
     "styled-components": "2.0.0"
   },
   "devDependencies": {
