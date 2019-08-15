@@ -186,7 +186,7 @@ var PrintPage = function (_React$Component) {
         null,
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_to_print__WEBPACK_IMPORTED_MODULE_2___default.a, {
           trigger: function trigger() {
-            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('a', { style: { visibility: 'hidden' }, id: 'sofa-print-button', href: '#' });
+            return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('a', { style: { visibility: 'hidden' }, id: 'sofa-print-button', href: 'javascript:void(0);' });
           },
           content: function content() {
             return _this2.componentRef;
