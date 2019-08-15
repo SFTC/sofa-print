@@ -68,7 +68,7 @@ class PrintPage extends React.Component {
     return (
       <div>
         <ReactToPrint
-          trigger={() => <a style={{ visibility: 'hidden' }} id="sofa-print-button" href="#"></a>}
+          trigger={() => <a style={{ visibility: 'hidden' }} id="sofa-print-button" href="javascript:void(0);"></a>}
           content={() => this.componentRef}
           onAfterPrint={this.props.onAfterPrint}
           onBeforePrint={this.props.onBeforePrint}
