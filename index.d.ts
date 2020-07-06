@@ -17,6 +17,8 @@ declare module sofaPrint {
       onBeforePrint: PropTypes.Requireable<PrintPage.PrintCallbackFn>,
       onAfterPrint: PropTypes.Requireable<PrintPage.PrintCallbackFn>,
       showGoBackButton: PropTypes.Requireable<boolean>,
+      printText: PropTypes.Requireable<string>,
+      printDesc: PropTypes.Requireable<string>,
     };
     static defaultProps: Partial<PrintPage.PrintPageProps>;
     private componentRef;
@@ -37,6 +39,8 @@ declare module sofaPrint {
       showGoBackButton: boolean,
       onBeforePrint?: PrintCallbackFn,
       onAfterPrint?: PrintCallbackFn,
+      printText?: string,
+      printDesc?: string,
     }
   }
 }

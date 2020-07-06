@@ -140,7 +140,7 @@ var PreviewBox = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.wi
 
 var ActionBar = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: 'printPage__ActionBar'
-})(['', 'height: 50px;display: flex;justify-content: flex-end;align-items: center;position: fixed;z-index: 1;background: #f4f4f4;box-shadow: 0 3px 5px #ccc;'], function (props) {
+})(['', 'height: 50px;display: flex;// justify-content: flex-end;\njustify-content: space-between;align-items: center;position: fixed;z-index: 1;background: #f4f4f4;box-shadow: 0 3px 5px #ccc;padding-left: 10px;'], function (props) {
   return props.pageWidth && Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["css"])(['width: ', 'px;'], props.pageWidth);
 });
 
@@ -179,7 +179,9 @@ var PrintPage = function (_React$Component) {
       var _props = this.props,
           previewStyle = _props.previewStyle,
           pageWidth = _props.pageWidth,
-          showGoBackButton = _props.showGoBackButton;
+          showGoBackButton = _props.showGoBackButton,
+          printText = _props.printText,
+          printDesc = _props.printDesc;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
         'div',
@@ -200,15 +202,24 @@ var PrintPage = function (_React$Component) {
           react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
             ActionBar,
             { pageWidth: pageWidth },
-            showGoBackButton && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-              Button,
-              { onClick: this.handleGoBack },
-              '\u8FD4\u56DE'
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+              'div',
+              null,
+              printDesc || ''
             ),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-              Button,
-              { onClick: this.handlePrint },
-              '\u6253\u5370'
+              'div',
+              null,
+              showGoBackButton && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+                Button,
+                { onClick: this.handleGoBack },
+                '\u8FD4\u56DE'
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+                Button,
+                { onClick: this.handlePrint },
+                printText
+              )
             )
           ),
           react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('div', { style: { height: '53px' } }),
@@ -239,7 +250,9 @@ PrintPage.propTypes = {
   goBack: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   onBeforePrint: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   onAfterPrint: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  showGoBackButton: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  showGoBackButton: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  printText: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  printDesc: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
 PrintPage.defaultProps = {
   previewStyle: false,
@@ -247,7 +260,9 @@ PrintPage.defaultProps = {
   showGoBackButton: true,
   goBack: undefined,
   onBeforePrint: undefined,
-  onAfterPrint: undefined
+  onAfterPrint: undefined,
+  printText: '打印',
+  printDesc: ''
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PrintPage);
