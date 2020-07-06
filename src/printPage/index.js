@@ -20,12 +20,14 @@ const ActionBar = styled.div`
   `}
   height: 50px;
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 1;
   background: #f4f4f4;
   box-shadow: 0 3px 5px #ccc;
+  padding-left: 10px;
 `;
 
 const Button = styled.button`
@@ -64,7 +66,7 @@ class PrintPage extends React.Component {
   }
 
   render() {
-    const { previewStyle, pageWidth, showGoBackButton } = this.props;
+    const { previewStyle, pageWidth, showGoBackButton, printText, printDesc } = this.props;
     return (
       <div>
         <ReactToPrint
@@ -76,8 +78,13 @@ class PrintPage extends React.Component {
         {previewStyle ?
           <PreviewBox pageWidth={pageWidth}>
             <ActionBar pageWidth={pageWidth}>
-              {showGoBackButton && <Button onClick={this.handleGoBack}>返回</Button>}
-              <Button onClick={this.handlePrint}>打印</Button>
+              <div>
+                { printDesc || '' }
+              </div>
+              <div>
+                {showGoBackButton && <Button onClick={this.handleGoBack}>返回</Button>}
+                <Button onClick={this.handlePrint}>{printText}</Button>
+              </div>
             </ActionBar>
             <div style={{ height: '53px' }} />
             <div ref={(el) => (this.componentRef = el)}>
@@ -100,6 +107,8 @@ PrintPage.propTypes = {
   onBeforePrint: PropTypes.func,
   onAfterPrint: PropTypes.func,
   showGoBackButton: PropTypes.bool,
+  printText: PropTypes.string,
+  printDesc: PropTypes.string,
 }
 PrintPage.defaultProps = {
   previewStyle: false,
@@ -108,6 +117,8 @@ PrintPage.defaultProps = {
   goBack: undefined,
   onBeforePrint: undefined,
   onAfterPrint: undefined,
+  printText: '打印',
+  printDesc: '',
 }
 
 export default PrintPage;
